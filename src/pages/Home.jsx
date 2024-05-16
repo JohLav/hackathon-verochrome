@@ -1,21 +1,27 @@
+import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import SearchBar from "../components/SearchBar.jsx";
 import Map from "../components/Map.jsx";
-import Button from "react-bootstrap/Button";
 import ParcDescription from "../components/ParcDescription.jsx";
-import { Link } from "react-router-dom";
+import initialData from "../data_final.json";
 
 export default function Home() {
+  const [filteredData, setFilteredData] = useState(initialData);
+  const [codePost, setCodePost] = useState("");
+
+  useEffect(() => {
+    if (codePost) {
+      const filtered = initialData.filter((item) => item.codepost === codePost);
+      setFilteredData(filtered);
+    } else setFilteredData(initialData);
+  }, [codePost]);
+
   return (
     <>
-      <h1>Hello from Home</h1>
       <Container>
-        <SearchBar />
+        <SearchBar setCodePost={setCodePost} />
         <Map />
-        <Link to="/parc">
-          <Button>Checkout</Button>
-        </Link>
-        <ParcDescription />
+        <ParcDescription data={filteredData} />
       </Container>
     </>
   );
