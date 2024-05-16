@@ -3,75 +3,43 @@ import Parc from "../assets/parc.svg";
 import { Container } from "react-bootstrap";
 
 import Card from "react-bootstrap/Card";
-// import{ getOverlayDirection } from "react-bootstrap/esm/helpers";
+
+const parcLyon = [
+  { id: 1, nom: "Parc de la Tête d'or", lieu: "Lyon 6" },
+  { id: 2, nom: "Parc de Suter", lieu: "Lyon 4 " },
+  { id: 3, nom: "Parc des Hauteurs", lieu: "Lyon 3" },
+  { id: 3, nom: "Parc de Anne Soso", lieu: "Lyon 3" },
+  { id: 3, nom: "Parc de Adeline", lieu: "Lyon 3" },
+];
 
 function ParcDescription() {
   return (
     <>
       <Container>
-        <Link to="/parc">
-          <Card
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              backgroundColor: "#BBC4AF",
-              marginBottom: "30px",
-            }}
-          >
-            <Card.Img
-              variant="top"
-              src={Parc}
-              style={{ height: "5rem", width: "20%" }}
-            />
-            <Card.Body>
-              <Card.Title>A afficher nom du parc</Card.Title>
-              <Card.Text>A afficher description du parc</Card.Text>
-            </Card.Body>
-          </Card>
-        </Link>
-        <Link to="/parc">
-          <Card
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              backgroundColor: "#F6F3EC",
-              marginBottom: "30px",
-            }}
-          >
-            <Card.Img
-              variant="top"
-              src={Parc}
-              style={{ height: "5rem", width: "20%" }}
-            />
-            <Card.Body>
-              <Card.Title>A afficher nom du parc</Card.Title>
-              <Card.Text>A afficher description du parc</Card.Text>
-            </Card.Body>
-          </Card>
-        </Link>
-        <Link to="/parc">
-          <Card
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              backgroundColor: "#F6F3EC",
-              marginBottom: "5px",
-            }}
-          >
-            <Card.Img
-              variant="top"
-              src={Parc}
-              style={{ height: "5rem", width: "20%" }}
-            />
-            <Card.Body>
-              <Card.Title>A afficher nom du parc</Card.Title>
-              <Card.Text>A afficher description du parc</Card.Text>
-            </Card.Body>
-          </Card>
-        </Link>
+        {parcLyon.map((parc, index) => (
+          <Link to="/parc" key={index}>
+            <Card
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                backgroundColor: "#BBC4AF",
+                marginBottom: "30px",
+              }}
+            >
+              <Card.Img
+                variant="top"
+                src={Parc}
+                style={{ height: "5rem", width: "20%" }}
+              />
+              <Card.Body>
+                <Card.Title>{parc.nom}</Card.Title>
+
+                <Card.Text>{parc.lieu}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+        ))}
       </Container>
     </>
   );
