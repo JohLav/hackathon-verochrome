@@ -1,20 +1,27 @@
-export default function Map() {
+import { useEffect, useRef } from "react";
 
-  return (
-    <>
-      {/*<Figure.Image*/}
-      {/*  src="https://public.tableau.com/shared/NP6DDSP7G?:display_count=n&:origin=viz_share_link"*/}
-      {/*/>*/}
-      {/*  <Ratio>*/}
-      {/*<embed type="image/svg+xml" src="https://public.tableau.com/shared/NP6DDSP7G?:display_count=n&:origin=viz_share_link"/>*/}
-      <iframe
-        src="https://public.tableau.com/shared/NP6DDSP7G?:display_count=n"
-        width="100%"
-        height="600px"
-        style={{ border: "none" }}
-        title="Tableau Dashboard"
-      ></iframe>
-      {/*</Ratio>*/}
-    </>
-  );
+export default function Map() {
+  const vizRef = useRef(null);
+
+  useEffect(() => {
+    const { tableau } = window;
+    const vizUrl =
+      "https://public.tableau.com/shared/NP6DDSP7G?:display_count=n&:origin=viz_share_link";
+
+    const options = {
+      width: "100%",
+      height: "600px",
+      hideTabs: true,
+      onFirstInteractive: function () {
+        console.log("Tableau Viz has finished loading");
+      },
+    };
+
+    let viz = new tableau.Viz(vizRef.current, vizUrl, options);
+    return () => {
+      if (viz) viz.dispose();
+    };
+  }, []);
+
+  return <></>;
 }
