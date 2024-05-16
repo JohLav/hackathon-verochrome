@@ -1,6 +1,11 @@
+$body-bg: #E2D8BE;
+
 @import 'bootstrap/scss/bootstrap';
 
 :root {
-    --bs-body-bg: #E2D8BE;
+}
+
+body {
+    //--bs-body-bg: #E2D8BE;
 }
 

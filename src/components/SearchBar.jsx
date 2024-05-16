@@ -1,9 +1,9 @@
-import {FormControl} from "react-bootstrap";
+import { FormControl } from "react-bootstrap";
 
 export default function SearchBar() {
-    return (
-        <>
-            <FormControl />
-        </>
-    )
+  return (
+    <>
+      <FormControl className="" />
+    </>
+  );
 }
