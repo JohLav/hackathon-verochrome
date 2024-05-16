@@ -1,3 +1,17 @@
 $body-bg: #e2d8be;
+$secondary: #614544;
 
 @import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+a {
+  text-decoration: none;
+}
+
+a i {
+  color: #614544;
+}
+
+i {
+  font-size: 2rem;
+}
