@@ -1,19 +1,12 @@
 import "./App.scss";
-import Button from "react-bootstrap/Button";
-import Map from "./components/Map.jsx";
-import { Container } from "react-bootstrap";
-import SearchBar from "./components/SearchBar.jsx";
+import {Outlet} from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
     <>
-      <Container>
-        <SearchBar />
-        <Map />
-        <Button>Checkout</Button>
-      </Container>
+        <main className="main-container">
+            <Outlet />
+        </main>
     </>
   );
 }
-
-export default App;
