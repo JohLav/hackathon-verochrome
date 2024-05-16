@@ -1,14 +1,27 @@
-import Figure from "react-bootstrap/Figure";
+import { useEffect, useRef } from "react";
 
 export default function Map() {
-  return (
-    <>
-      <Figure.Image
-        width={171}
-        height={180}
-        alt="171x180"
-        src="src/assets/Capture-ARemplacer.png"
-      />
-    </>
-  );
+  const vizRef = useRef(null);
+
+  useEffect(() => {
+    const { tableau } = window;
+    const vizUrl =
+      "https://public.tableau.com/shared/NP6DDSP7G?:display_count=n&:origin=viz_share_link";
+
+    const options = {
+      width: "100%",
+      height: "600px",
+      hideTabs: true,
+      onFirstInteractive: function () {
+        console.log("Tableau Viz has finished loading");
+      },
+    };
+
+    let viz = new tableau.Viz(vizRef.current, vizUrl, options);
+    return () => {
+      if (viz) viz.dispose();
+    };
+  }, []);
+
+  return <></>;
 }
