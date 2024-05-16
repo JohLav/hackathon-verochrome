@@ -23,5 +23,9 @@ export default function Map() {
     };
   }, []);
 
-  return <></>;
+  return (
+    <>
+      <div ref={vizRef}></div>
+    </>
+  );
 }
