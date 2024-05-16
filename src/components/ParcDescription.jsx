@@ -3,7 +3,6 @@ import Parc from "../assets/parc.svg";
 import { Container } from "react-bootstrap";
 
 import Card from "react-bootstrap/Card";
-// import{ getOverlayDirection } from "react-bootstrap/esm/helpers";
 
 function ParcDescription() {
   return (
