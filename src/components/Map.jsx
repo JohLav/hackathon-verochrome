@@ -1,12 +1,13 @@
 import { useEffect, useRef } from "react";
 
 export default function Map() {
-  const vizRef = useRef(null);
+  const ref = useRef(null);
+
+  const url =
+    "https://public.tableau.com/shared/NP6DDSP7G?:display_count=n&:origin=viz_share_link";
 
   useEffect(() => {
     const { tableau } = window;
-    const vizUrl =
-      "https://public.tableau.com/shared/NP6DDSP7G?:display_count=n&:origin=viz_share_link";
 
     const options = {
       width: "100%",
@@ -17,11 +18,19 @@ export default function Map() {
       },
     };
 
-    let viz = new tableau.Viz(vizRef.current, vizUrl, options);
+    let viz;
+    if (ref.current && tableau) {
+      viz = new tableau.Viz(ref.current, url, options);
+    }
+
     return () => {
       if (viz) viz.dispose();
     };
-  }, []);
+  }, [url]);
 
-  return <></>;
+  return (
+    <>
+      <div ref={ref}></div>
+    </>
+  );
 }
