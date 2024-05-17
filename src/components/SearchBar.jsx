@@ -2,7 +2,6 @@ import { FormControl, InputGroup } from "react-bootstrap";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import PropTypes from "prop-types";
-// import Loupe from "../assets/loupe.svg";
 
 export default function SearchBar({ setCodePost }) {
   const [currentSearch, setCurrentSearch] = useState("");
@@ -22,11 +21,6 @@ export default function SearchBar({ setCodePost }) {
             style={{ backgroundColor: "#6D882E", border: "1px solid #AF8379" }}
           >
             <i className="bi bi-search"></i>
-            {/* <img
-              style={{ opacity: 0.5 }}
-              src={Loupe}
-              alt="Description de l'image"
-            /> */}
           </InputGroup.Text>
           <FormControl
             style={{ border: "1px solid #AF8379" }}
@@ -38,7 +32,6 @@ export default function SearchBar({ setCodePost }) {
             style={{
               backgroundColor: "#6D882E",
               border: "none",
-              // border: "2px solid #AF8379",
             }}
             onClick={(e) => {
               e.preventDefault();
