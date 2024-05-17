@@ -10,7 +10,7 @@ export default function Info_parc() {
         className=" d-flex justify-content-center align-items-center bg-info w-75 rounded-1 mt-5 text-center "
         style={{ margin: "0 auto ", color: "#614544" }}
       >
-        <h2 className="">{parcData.nom}</h2>
+        <h2 className="m-auto mb-0 p-2">{parcData.nom}</h2>
       </div>
       <div className="d-flex justify-content-center py-2 ">
         <img
