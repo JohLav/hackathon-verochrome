@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
 import { Outlet } from "react-router-dom";
-import initialData from "./data_final.json";
+import initialData from "./new_data_final_2.json";
 
 export default function App() {
   const [filteredData, setFilteredData] = useState(initialData);
