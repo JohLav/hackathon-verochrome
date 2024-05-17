@@ -16,7 +16,6 @@ function ParcDescription({data}) {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                backgroundColor: "#BBC4AF",
                 marginBottom: "30px",
               }}
             >
