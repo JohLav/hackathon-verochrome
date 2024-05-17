@@ -17,15 +17,15 @@ export default function SearchBar({ setCodePost }) {
             marginLeft: "0.5rem",
           }}
         >
-          <InputGroup.Text
+          {/* <InputGroup.Text
             style={{ backgroundColor: "#6D882E", border: "1px solid #AF8379" }}
           >
             <i className="bi bi-search"></i>
-          </InputGroup.Text>
+          </InputGroup.Text> */}
           <FormControl
             style={{ border: "1px solid #AF8379" }}
             value={currentSearch}
-            placeholder="Tape ton code postale"
+            placeholder="🔎 Tape ton code postal"
             onChange={(e) => setCurrentSearch(e.target.value)}
           />
           <Button
