@@ -5,6 +5,11 @@ $info: #bac5a6;
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+div.tableau {
+  display: flex;
+  justify-content: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,6 +26,7 @@ i {
   color: white;
   font-size: small;
 }
+
 div.card {
   background-color: #f6f3ec;
 }
