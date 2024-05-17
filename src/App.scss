@@ -30,3 +30,15 @@ div.card:focus,
 div.card:visited {
   background-color: #bbc4af;
 }
+
+.logo {
+  height: 844px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.logo {
+  margin: 0 auto;
+  height: 150px;
+}
