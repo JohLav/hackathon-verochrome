@@ -20,4 +20,10 @@ i {
 .bi-search {
   color: white;
   font-size: small;
+div.card {
+  background-color: #F6F3EC;
+}
+
+div.card:hover, div.card:focus, div.card:visited {
+  background-color: #BBC4AF;
 }
