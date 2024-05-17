@@ -3,8 +3,11 @@ $secondary: #614544;
 $info: #bac5a6;
 
 @import "bootstrap/scss/bootstrap";
-
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+a {
+  text-decoration: none;
+}
 
 a i {
   color: #614544;
