@@ -7,16 +7,17 @@ export default function Info_parc() {
   return (
     <>
       <div
-        className=" d-flex justify-content-center align-items-center bg-info w-50 rounded-1 mt-5 "
+        className=" d-flex justify-content-center align-items-center bg-info w-75 rounded-1 mt-5 text-center "
         style={{ margin: "0 auto ", color: "#614544" }}
       >
-        <h1>{parcData.nom}</h1>
+        <h2 className="">{parcData.nom}</h2>
       </div>
       <div className="d-flex justify-content-center py-2 ">
         <img
           src={imgPage}
           alt="basilique"
-          className="w-50 rounded-1"
+          className="w-75 rounded-1 mt-3
+          "
           style={{ margin: "0 auto " }}
         />
       </div>
