@@ -10,7 +10,7 @@ export default function App() {
   console.log(initialData);
 
   useEffect(() => {
-    if (codePost) {
+    if (codePost !== null) {
       const filtered = initialData.filter((item) => {
         const code = parseInt(codePost, 10);
         return !isNaN(code) && item.codepost === code;
