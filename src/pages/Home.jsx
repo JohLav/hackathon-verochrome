@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     if (codePost) {
-      const filtered = initialData.filter((item) => item.codepost === codePost);
+      const filtered = initialData.filter((item) => item.codepost ===  parseInt(codePost));
       setFilteredData(filtered);
     } else setFilteredData(initialData);
   }, [codePost]);
