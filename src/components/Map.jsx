@@ -4,7 +4,7 @@ export default function Map() {
   const ref = useRef(null);
 
   const url =
-    "https://public.tableau.com/shared/NP6DDSP7G?:display_count=n&:origin=viz_share_link";
+    "https://public.tableau.com/views/hackathon2_17159384045180/Tableaudebord1?:language=fr-FR&publish=yes&:sid=&:display_count=n&:origin=viz_share_link";
 
   useEffect(() => {
     const { tableau } = window;

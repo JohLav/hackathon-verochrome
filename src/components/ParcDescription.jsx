@@ -16,8 +16,7 @@ function ParcDescription({ data }) {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                backgroundColor: "#BBC4AF",
-                marginBottom: "30px",
+                margin: "30px 0",
               }}
             >
               <Card.Img
